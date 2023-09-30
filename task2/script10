@@ -1,0 +1,22 @@
+<?php
+function calculateRectangleArea($length, $width) {
+
+    if ($length <= 0 || $width <= 0) {
+        return "Length and width must be positive numbers.";
+    }
+
+    $area = $length * $width;
+
+    return $area;
+}
+$length = 5; 
+$width = 3;
+
+$result = calculateRectangleArea($length, $width);
+
+if (is_numeric($result)) {
+    echo "The area of the rectangle with length $length and width $width is: $result square units";
+} else {
+    echo $result;
+}
+?>
